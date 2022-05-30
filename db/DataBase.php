@@ -29,10 +29,16 @@ class DataBase{
            
     }
 
-    public function SqlDml($sql){
+    public function Query($sql){
 
         return $this->BancoLink->query($sql);
     }
+
+    public function SqlDml($sql){
+
+        return $this->BancoLink->exec($sql);
+    }
+
 }
 
 ?>

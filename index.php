@@ -1,8 +1,9 @@
 <?php
 include_once './class/Pessoa.php';
+include_once './class/Livro.php';
 
 $query = Pessoa::GetPessoa();
-
+$getlivro = Livro::GetLivros();
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,14 @@ $query = Pessoa::GetPessoa();
 while ($row = $query->fetch()) {
     echo $row['Id']."  -  ".$row['nom_pessoa'].",  ".$row['cpf_pessoa']."<br><hr>";
 }
+
+
+while ($row = $getlivro->fetch()) {
+    echo $row['cod_livro']." - ".$row['titulo_livro']."  -  ".$row['autor_livro'].",  ".$row['cod_isbn'].", ".$row['nome_editora'].", ".$row['qtd_paginas']."<br><hr>";
+
+}
 ?>
+
     
 </body>
 </html>
