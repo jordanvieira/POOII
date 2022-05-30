@@ -1,11 +1,11 @@
 <?php
 
 class DataBase{
-    public $BancoLink;
-    public $Servidor;
-    public $Base;
-    public $Senha;
-    public $TipoBanco;
+    private $BancoLink;
+    private $Servidor;
+    private $Base;
+    private $Senha;
+    private $TipoBanco;
 
     function __construct($base, $usuario, $senha, $servidor, $tipobanco = 1)
     {
