@@ -1,5 +1,4 @@
 <?php
-include_once '../config.php';
 
 class DataBase{
     public $BancoLink;
@@ -18,11 +17,16 @@ class DataBase{
         $this->TipoBanco = $tipobanco;
 
         //TipoBanco = 1 Mysql ou Mariadb
-        if ($this->BancoLink = new PDO ('mysql:host='.
+        if ($this->TipoBanco==1){ 
+
+            $this->BancoLink = new PDO ('mysql:host='.
                                         $this->Servidor.
                                         ';dbname='.$this->Base,
                                         $this->Usuario,
-                                        $this->Senha)); 
+                                        $this->Senha);      
+        
+        }
+           
     }
 
     public function SqlDml($sql){

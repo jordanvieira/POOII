@@ -1,11 +1,7 @@
 <?php
-include_once './db/DataBase.php';
 include_once './class/Pessoa.php';
-include_once 'config.php';
 
-$query = $conn->query("SELECT * FROM pessoa");
 $query = Pessoa::GetPessoa();
-
 
 ?>
 
