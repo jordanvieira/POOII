@@ -7,7 +7,7 @@ class Pessoa {
 
         $db = new DataBase(BANCODEDADOS, USUARIO, SENHA, SERVIDOR);
 
-        return $db->BancoLink->query("SELECT * FROM pessoa");
+        return $db->SqlDml("SELECT * FROM pessoa");
 
     }
 }
