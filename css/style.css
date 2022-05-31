@@ -1,0 +1,18 @@
+:root{
+    --fundo:linear-gradient(0deg,
+    rgb(255, 255, 255) 30%,
+    rgb(1, 211, 255) 100%);
+ 
+    
+  }
+
+.myBackground {
+    /* background-image: url(); */
+        background: rgb(255, 255, 255);
+    background: var(--fundo);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}

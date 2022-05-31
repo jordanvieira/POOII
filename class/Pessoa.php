@@ -10,5 +10,14 @@ class Pessoa {
         return $db->Query("SELECT * FROM pessoa");
 
     }
+
+    public static function deletePessoa($id){
+
+        $db = new DataBase(BANCODEDADOS, USUARIO, SENHA, SERVIDOR);
+
+        $sql = "DELETE FROM pessoa WHERE id=$id";
+
+        return $db->SqlDml($sql);
+    }
 }
 ?>
