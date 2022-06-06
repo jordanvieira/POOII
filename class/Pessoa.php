@@ -15,7 +15,7 @@ class Pessoa {
 
         $db = new DataBase(BANCODEDADOS, USUARIO, SENHA, SERVIDOR);
 
-        $sql = "DELETE FROM pessoa WHERE id=$id";
+        $sql = "DELETE FROM pessoa WHERE Id=$id";
 
         return $db->SqlDml($sql);
     }

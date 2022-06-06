@@ -7,6 +7,12 @@ if (isset($_GET["CodExcluir"])) {
     $delete = Pessoa::deletePessoa($id);   
 }
 
+
+if (isset($_GET["CodExclui"])) {
+    $CodLivro=$_GET["CodExclui"];
+    $delete = Livro::Delete($CodLivro);   
+}
+
 $query = Pessoa::GetPessoa();
 $getlivro = Livro::GetLivros();
 ?>
@@ -45,7 +51,42 @@ $getlivro = Livro::GetLivros();
                 <td><?php echo($row["cpf_pessoa"]); ?></td>
                 <td>
                     <a href="index.php?CodExcluir=<?php echo($row["Id"]); ?>">
-                    <input type="submit" value="Excluir"id="CodExcluir" name="CodExcluir" />
+                    <input class="botao" type="submit" value="Excluir"id="CodExcluir" name="CodExcluir" />
+                    </a>
+                </td>
+                </tr>
+            </tbody>
+        <?php
+            } ?>
+        </table>
+
+        <h3 id="panel" class = "text-center">LIVROS</h3>
+        <table class="table table-dark table-hover " >
+            <thead>
+                <tr class = "text-center">
+                <th scope="col">ID</th>
+                <th scope="col">TITULO</th>
+                <th scope="col">AUTOR</th>
+                <th scope="col">ISBN</th>
+                <th scope="col">EDITORA</th>
+                <th scope="col">QTD_PAGINAS</th>
+                <th scope="col">Excluir</th>
+                </tr>
+            </thead>
+            <?php
+                while ($row = $getlivro->fetch()) {
+                ?>
+            <tbody>
+                <tr class = "text-center">
+                <td><?php echo($row["cod_livro"]); ?></td>
+                <td><?php echo ($row["titulo_livro"]); ?></td>
+                <td><?php echo($row["autor_livro"]); ?></td>
+                <td><?php echo($row["cod_isbn"]); ?></td>
+                <td><?php echo($row["nome_editora"]); ?></td>
+                <td><?php echo($row["qtd_paginas"]); ?></td>
+                <td>
+                    <a href="index.php?CodExclui=<?php echo($row["cod_livro"]); ?>">
+                    <input class="botao" type="submit" value="Excluir"id="CodExclui" name="CodExclui" />
                     </a>
                 </td>
                 </tr>
@@ -54,14 +95,6 @@ $getlivro = Livro::GetLivros();
             } ?>
         </table>
 </article> <!-- final  article (container)-->
-
-<?php 
-
-while ($row = $getlivro->fetch()) {
-    echo $row['cod_livro']." - ".$row['titulo_livro']."  -  ".$row['autor_livro'].",  ".$row['cod_isbn'].", ".$row['nome_editora'].", ".$row['qtd_paginas']."<br><hr>";
-
-}
-?>
 
     
 </body>

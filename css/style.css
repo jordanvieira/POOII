@@ -19,3 +19,10 @@
 #panel{
     color:  white;
 }
+
+.botao{
+    color: white;
+    background-color: #0063c7;
+    border: none;
+    border-radius: 4px;
+}

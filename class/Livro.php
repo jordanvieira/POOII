@@ -21,5 +21,19 @@ class Livro {
         
         return $db->SqlDml($sql);
     }
+
+    
+    public static function Delete($CodLivro){
+        $db = new DataBase(BANCODEDADOS, USUARIO, SENHA, SERVIDOR);
+
+        $sqli = "DELETE FROM livros WHERE cod_livro=$CodLivro";
+
+        return $db->SqlDml($sqli);
+    }
+
+
+
+
+
 }
 ?>
