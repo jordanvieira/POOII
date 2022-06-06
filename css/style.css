@@ -1,7 +1,7 @@
 :root{
     --fundo:linear-gradient(0deg,
-    rgb(255, 255, 255) 30%,
-    rgb(1, 211, 255) 100%);
+    #00b6f6 30%,
+    #0063c7 100%);
  
     
   }
@@ -15,4 +15,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+}
+#panel{
+    color:  white;
 }

@@ -25,7 +25,7 @@ $getlivro = Livro::GetLivros();
 <body class="myBackground">   
 
 <article class="container">
-    <h2 class = "text-center">Painel Administrativo</h2>
+    <h2 id="panel" class = "text-center">Painel Administrativo</h2>
         <table class="table table-dark table-hover " >
             <thead>
                 <tr class = "text-center">
