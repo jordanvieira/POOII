@@ -96,6 +96,6 @@ $getlivro = Livro::GetLivros();
         </table>
 </article> <!-- final  article (container)-->
 
-    
+
 </body>
 </html>

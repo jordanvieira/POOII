@@ -6,3 +6,5 @@ CREATE TABLE Livros( cod_livro INT NOT NULL AUTO_INCREMENT,
                       qtd_paginas INT NOT NULL, 
                       PRIMARY KEY (cod_livro))
 ENGINE = InnoDB;
+
+https://github.com/dakshftw/codinghashira
