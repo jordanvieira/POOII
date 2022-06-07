@@ -16,22 +16,7 @@ if (empty($titulo_livro) || empty($cod_isbn) || empty($autor_livro) || empty($no
 
 } else {
     $livro = Livro::Insert($titulo_livro, $autor_livro, $cod_isbn, $nome_editora, $qtd_paginas);
-    echo "Livro cadastrado com sucesso!";
+    echo "<script>alert('Livro cadastrado com sucesso!');</script>";
 }
-
-
-
-// $stmt = $PDO->prepare($sql);
-// $stmt->bindParam(':titulo_livro', $titulo_livro);
-// $stmt->bindParam(':autor_livro', $autor_livro);
-// $stmt->bindParam(':cod_isbn', $cod_isbn);
-// $stmt->bindParam(':nome_editora', $nome_editora);
-// $stmt->bindParam(':qtd_paginas', $qtd_paginas);
-// if($stmt->execute()){
-//     header('Location: inclui.php');
-// }else{
-//     echo "Erro ao cadastrar livro!";
-//     print_r($stmt->errorInfo());
-// }
 
 ?>
