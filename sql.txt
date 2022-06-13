@@ -8,3 +8,5 @@ CREATE TABLE Livros( cod_livro INT NOT NULL AUTO_INCREMENT,
 ENGINE = InnoDB;
 
 https://github.com/dakshftw/codinghashira
+
+https://github.com/oMatheusCaetano/Php-Poo
