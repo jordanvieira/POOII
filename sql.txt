@@ -1,10 +1,10 @@
-CREATE TABLE Livros( cod_livro INT NOT NULL AUTO_INCREMENT,
-                      titulo_livro VARCHAR(50) NOT NULL, 
-                      autor_livro VARCHAR(50) NOT NULL, 
-                      cod_isbn CHAR(17) NOT NULL, 
-                      nome_editora VARCHAR(50) NOT NULL, 
-                      qtd_paginas INT NOT NULL, 
-                      PRIMARY KEY (cod_livro))
+CREATE TABLE Livros( cod_livro INT AUTO_INCREMENT,
+                      cod_pessoa_emprestimo INT, 
+                      titulo_livro VARCHAR(50),
+                      autor_livro VARCHAR(50),
+                      ind_emprestimo BIT,
+                      PRIMARY KEY (cod_livro)),
+                      FOREIGN KEY(cod_pessoa_emprestimo) REFERENCES Pessoa(cod_pessoa)
 ENGINE = InnoDB;
 
 https://github.com/dakshftw/codinghashira
