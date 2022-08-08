@@ -7,6 +7,7 @@ CREATE TABLE Livros( cod_livro INT AUTO_INCREMENT,
                       FOREIGN KEY(cod_pessoa_emprestimo) REFERENCES Pessoa(cod_pessoa)
 ENGINE = InnoDB;
 
+
 https://github.com/dakshftw/codinghashira
 
 https://github.com/oMatheusCaetano/Php-Poo

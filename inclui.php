@@ -16,7 +16,14 @@ if (empty($titulo_livro) || empty($cod_isbn) || empty($autor_livro) || empty($no
 
 } else {
     $livro = Livro::Insert($titulo_livro, $autor_livro, $cod_isbn, $nome_editora, $qtd_paginas);
-    echo "<script>alert('Livro cadastrado com sucesso!');</script>";
-}
+} 
 
 ?>
+
+<html>
+    <script type="text/javascript">
+        alert('Livro cadastrado com sucesso!');
+        window.location="index.php";
+    </script>
+    
+</html>
